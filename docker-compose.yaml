@@ -1,0 +1,7 @@
+services:
+  server_go:
+    build: ./server_go
+    ports:
+      - "8199:8199"
+  server_rs:
+    build: ./server_rs
