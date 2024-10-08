@@ -107,7 +107,7 @@ fn get_disks_info() -> DisksInfo {
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     HttpServer::new(|| App::new().service(get_info))
-        .bind(("::1", 8198))?
+        .bind(("0.0.0.0", 8198))?
         .run()
         .await
 }

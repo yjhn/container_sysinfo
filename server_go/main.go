@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-const rustServerAddr = "http://localhost:8198/"
+const rustServerAddr = "http://server_rs:8198/"
 
 func getInfo(w http.ResponseWriter, r *http.Request) {
 	res, err := http.Get(rustServerAddr)
