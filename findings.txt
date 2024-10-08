@@ -4,6 +4,8 @@ Containers share with the host:
 Containers get their own:
 - process space (i.e. host processes not visible)
 - disks
+- network interfaces and addresses
 
 Disks seem to inherit the disk space of the host, but the files inside the container's filesystem are from the container image.
 Process space is separate for each container, i.e. they don't see host's processes and PIDs start from 1 inside the container.
+Each docker container is given a unique IP address (from 172.*.*.*), which are accessible (i.e. can be pinged) from outside the container, but services inside the containers are not if not explicitly exposed.
