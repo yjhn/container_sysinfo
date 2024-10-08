@@ -1,0 +1,9 @@
+Containers share with the host:
+- uptime (same value as on host)
+
+Containers get their own:
+- process space (i.e. host processes not visible)
+- disks
+
+Disks seem to inherit the disk space of the host, but the files inside the container's filesystem are from the container image.
+Process space is separate for each container, i.e. they don't see host's processes and PIDs start from 1 inside the container.

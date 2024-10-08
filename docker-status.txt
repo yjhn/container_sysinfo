@@ -1,0 +1,16 @@
+output of 'docker container ls':
+
+CONTAINER ID   IMAGE                         COMMAND                  CREATED         STATUS         PORTS                                       NAMES
+f415c0e969ad   container_sysinfo-server_go   "/server_go"             3 minutes ago   Up 3 minutes   0.0.0.0:8199->8199/tcp, :::8199->8199/tcp   container_sysinfo-server_go-1
+9cf783462b28   container_sysinfo-server_rs   "./target/release/se…"   3 minutes ago   Up 3 minutes   8198/tcp                                    container_sysinfo-server_rs-1
+
+
+output of 'docker network ls':
+NETWORK ID     NAME                              DRIVER    SCOPE
+a324ae55dbc0   bridge                            bridge    local
+371be77a0160   container_sysinfo_default         bridge    local
+fd7d1c36539e   container_sysinfo_myapp_network   bridge    local
+f86b860cc731   host                              host      local
+526b28cfc670   none                              null      local
+ac79440d7d9b   server_rs_myapp_network           bridge    local
+
